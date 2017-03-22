@@ -7,9 +7,17 @@ then
 		export MODEM_TTY=/dev/cu.usbserial-00002114B
 		export MODEM_SPEED=115200
 	fi;
+elif [ "$OS" = "Linux" ]
+then
+	if [ -e "/dev/cu.usbserial-00002114B" ]
+        then
+                export MODEM_TTY=/dev/cu.usbserial-00002114B
+                export MODEM_SPEED=115200
+        fi;
+else
+        echo "Unknown OS"
+        exit 1
 fi
-export LANG=en_GB
-export LC_CTYPE=C
 echo "MODEM TTY:$MODEM_TTY SPEED:$MODEM_SPEED"
 if [ "$OS" = "Darwin" ]
 then

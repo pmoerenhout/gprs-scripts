@@ -14,7 +14,7 @@ kdebug 7
 crtscts # Use for Serial, BlueTooth and USB devices.
 #nocrtscts # Use for IrDA devices.
 nocdtrcts
-#xonxoff
+# xonxoff
 # local
 # pass-filter 'udp'
 novj
@@ -25,9 +25,7 @@ noaccomp
 # With the 'nomagic' option, PPPD cannot detect a looped-back line.
 # Uncomment this only if the PPPD connection is buggy.
 # nomagic
-name name
-user apn_user
-password apn_password
+# name name
 # Show password in debug messages.
 show-password
 0.0.0.0:0.0.0.0
