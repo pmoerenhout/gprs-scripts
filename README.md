@@ -41,7 +41,7 @@ To test, use explitly the ppp0 interface or specify the assigned IP as source ad
 
 The \<src\> is the PPP assigned IP address, which will be shown in the console when running the connect.sh script.
 
-##Note
+## Notes
 The limit the traffic you can filter the IP traffic in the options file with the paramater pass-filter.
 The pass-filter specifies a packet filter to be applied to data packets being sent or received to determine which packets should be allowed to pass.
 See man pppd.
