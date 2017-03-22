@@ -22,7 +22,7 @@ Connect using APN as specified with username and password:
     $ sudo ./connect.sh <apnname> <username> <password>
 
 
-#####Note: To disconnect, kill the pppd process in another terminal window.
+##### Note: To disconnect, kill the pppd process in another terminal window.
 
 ## Testing the GPRS connection
 
