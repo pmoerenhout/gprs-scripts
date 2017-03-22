@@ -1,0 +1,51 @@
+#
+# default options for pppd
+#
+noauth
+passive
+noipdefault
+nodefaultroute
+# Specify 'nodetach' to allow PPPD to run interactively rather than as a background daemon.
+nodetach
+# Comment this out once the PPP configuration is connecting successfully.
+debug
+kdebug 7
+# Hardware flow control should be used with most devices.
+crtscts # Use for Serial, BlueTooth and USB devices.
+#nocrtscts # Use for IrDA devices.
+nocdtrcts
+#xonxoff
+# local
+# pass-filter 'udp'
+novj
+nobsdcomp
+novjccomp
+nopcomp
+noaccomp
+# With the 'nomagic' option, PPPD cannot detect a looped-back line.
+# Uncomment this only if the PPPD connection is buggy.
+# nomagic
+name name
+user apn_user
+password apn_password
+# Show password in debug messages.
+show-password
+0.0.0.0:0.0.0.0
+ipcp-accept-local
+ipcp-accept-remote
+ipcp-restart 15
+ipcp-max-configure 30
+lcp-echo-interval 10
+lcp-echo-failure 100
+lcp-restart 55
+lcp-max-terminate 15
+lcp-max-configure 10
+lcp-max-failure 10
+asyncmap 0
+usepeerdns
+maxfail 3
+# disconnect when 300 seconds of no traffic
+idle 300
+# maximum of 600 seconds connection
+maxconnect 600
+mtu 1492
