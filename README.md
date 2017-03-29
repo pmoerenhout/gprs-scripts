@@ -6,14 +6,18 @@ The PPP daemon will instanciate the ppp0 interface when connected.
 
 ## Usage
 
+Make the scripts executable.
+
+    $ chmod +x connect.sh env.sh 
+
 First configure the serial device and the serial speed in the env.sh file.
 The connected devices are listed in /dev/tty* and /dev/cu*.
 
-Connect using the default APN 'internet':
+Connect using the an empty APN:
 
     $ sudo ./connect.sh
 
-Connect using APN as specified in the parameter:
+Connect using APN as specified in the 1st parameter:
 
     $ sudo ./connect.sh <apnname>
 
@@ -42,6 +46,6 @@ To test, use explitly the ppp0 interface or specify the assigned IP as source ad
 The \<src\> is the PPP assigned IP address, which will be shown in the console when running the connect.sh script.
 
 ## Notes
-The limit the traffic you can filter the IP traffic in the options file with the paramater pass-filter.
+(Linux only) To limit the traffic, the IP traffic can be filtered in the options file with the paramater pass-filter.
 The pass-filter specifies a packet filter to be applied to data packets being sent or received to determine which packets should be allowed to pass.
 See man pppd.
