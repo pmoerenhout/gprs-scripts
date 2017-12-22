@@ -1,4 +1,4 @@
-# Scripts to connect and test an GPRS service on MacOS
+# Scripts to connect and test an GPRS service on MacOS or Linux
 
 ## GPRS connect script
 The scripts connects a Mac (or Linux) to the GPRS network. It allows testing of traffic towards the GPRS connection.
@@ -25,7 +25,6 @@ Connect using APN as specified with username and password:
 
     $ sudo ./connect.sh <apnname> <username> <password>
 
-
 ##### Note: To disconnect, kill the pppd process in another terminal window.
 
 ## Testing the GPRS connection
@@ -38,6 +37,7 @@ To test, use explitly the ppp0 interface or specify the assigned IP as source ad
 ##### Example of testing ICMP towards the Google DNS:
 
     $ ping -S <src> 8.8.8.8
+    $ ping -I ppp0 8.8.8.8
 
 ##### Example of testing an HTTP connection:
 
