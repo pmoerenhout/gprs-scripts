@@ -14,11 +14,16 @@ then
 	fi; fi;
 elif [ "$OS" = "Linux" ]
 then
-	if [ -e "/dev/cu.usbserial-00002114B" ]
+  if [ -e "/dev/cu.usbserial-00002114B" ]
   then
     export MODEM_TTY=/dev/cu.usbserial-00002114B
     export MODEM_SPEED=115200
-  fi;
+  else
+  if [ -e "/dev/ttyACM0" ]
+  then
+    export MODEM_TTY=/dev/ttyACM0
+    export MODEM_SPEED=115200
+  fi; fi;
 else
   echo "Unknown OS"
   exit 1
